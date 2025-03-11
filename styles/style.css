@@ -33,8 +33,9 @@ header{
     color: #E6E6E6;;
 }
 
-.whiteSection{
+.whiteSection1{
     background-color: #FFFFFF;
+    display: flex;
 }
 .img1{
     max-width: 400px;
@@ -42,6 +43,15 @@ header{
 }
 
 
+.whiteSection1, h2, p, button{
+    width: 50vw;
+    /* flex-direction: column;*/
+    justify-content: center;
+    align-items: center; 
+}
+p{
+    width: 50vw;
+}
 
 
 
