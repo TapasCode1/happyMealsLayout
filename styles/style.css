@@ -1,77 +1,210 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-header{
-    display: flex; /*vemos los item de forma horizontal*/
-    min-height: 70px;
-    background-color: #F5CB00;
-    justify-content: space-between; /*los elementos se separen de esquina a esquina*/
-    align-items: center;
-    padding: 20px;
-    
-}
-.logo{
-    display: flex;
-    align-items: center;
-}
-.logo img{
-    height: 50px;
-}
-.nav-item{
-    color: #000000;
-    font-weight: 700; /*aplicar negrita*/
-    text-decoration: none;
-    display: inline-flex;
-    justify-content: space-between;
-    padding-right: 35px; /*separacion de los items*/
-}
-.nav-item:hover{
-    color: #E6E6E6;;
+    box-sizing: border-box;
 }
 
-.whiteSection1{
-    background-color: #FFFFFF;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /*separado entre lineas*/
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #F5CB00;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100px;
+    padding-left: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 35px; /*establece el tamaño del espacio (el espacio vacío) entre las filas y las columnas */
+}
+
+.nav-item {
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: #E6E6E6;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px; /* Para tener en cuenta el encabezado fijo */
+}
+
+section, article {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+/*fotos*/
+.img1, .img2, .img3{
     display: flex;
 }
 .img1{
-    max-width: 400px;
-    float: left;
+    min-width:700px;
+    padding-left: 10%;   
+}
+.img2{
+    min-width: 700px;
+    top: 30px;
+}
+.img3{
+    width: 300px;
+    min-height: 300px;
+    margin-left: 30%;
 }
 
-
-.whiteSection1, h2, p, button{
-    width: 50vw;
-    /* flex-direction: column;*/
-    justify-content: center;
-    align-items: center; 
-}
-p{
-    width: 50vw;
+.whiteSection {
+    background-color: #FFFFFF;
 }
 
-
-
-
-
-
-
-
-
-
-
-.yellowSection{
-    background-color: #F5CB00;
-}
-.greySection{
+.greySection {
     background-color: #E6E6E6;
 }
-.blackSection{
+
+.yellowSection {
+    background-color: #F5CB00;
+}
+
+.blackSection {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.blackForm {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 50%;
+    max-width: 400px;
+}
+
+.blackForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+.blackForm input, .blackForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.blackForm button {
+    padding: 10px 20px;
+    background-color: #F5CB00;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    width: 50%; /*para que las imagenes ocupen la mitad del ancho*/
+}
+
+h2 {
+    font-size: 3.5em; /*unidad de medida basada en los pixeles que traiga por defecto el css*/
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.buttonInfoYellow {
+    background-color: #F5CB00;
+    color: #000000;
+}
+
+.buttonInfoBlack {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.buttonSubscribe, .buttonContact {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.buttonContact{
     background-color: #000000;
 }
-.blackForm{
+
+
+.whiteSection:last-of-type {
+    flex-direction: row-reverse; /* orden inverso de forma y contenido */
+}
+
+.whiteSection:last-of-type .blackForm {
+    margin-right: 20px;
+}
+
+footer {
     background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    margin-top: 20px;
 }
